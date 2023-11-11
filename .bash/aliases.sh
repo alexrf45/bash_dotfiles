@@ -3,11 +3,18 @@ alias ec2-check='aws ec2 describe-instances --query "Reservations[*].Instances[*
 
 alias s3-list="aws s3api list-buckets | jq -r '.Buckets[].Name'"
 
-alias obsidian-backup-s3='aws s3 sync ~/r0land-notes/r0land/. s3://r0land-obsidian'
+alias obsidian-backup-s3='aws s3 sync $HOME/sec-notes/notes/. s3://sec-notes'
+
+alias aws-services-list='~/.config/scripts/./services.sh'
+alias aws-services-cost='~/.config/scripts/service-cost.sh'
+alias aws-current-cost='~/.config/scripts/awscurrentcost.sh'
+alias aws-cost-overall='~/.config/scripts/awscost.sh'
+alias s3-backend-delete='~/.config/scripts/./s3-backend-delete.sh'
+
 
 #aws_vault aliases
-alias awsv='aws-vault exec Administrator'
-
+alias awsv-account-admin='aws-vault exec account-admin --duration=2h'
+alias awsv-account-admin-no-session='aws-vault exec account-admin --no-session'
 #-----------------------------------------GIT ENV & aliases---------------------------------------------
 alias review='git log --graph --oneline --decorate'
 

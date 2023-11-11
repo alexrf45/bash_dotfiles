@@ -10,6 +10,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+for file in $HOME/.bash/*.sh; do
+    source "$file"
+done
+
+fpath=(/tmp/bash-completions/src $fpath)
+
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
@@ -30,6 +36,7 @@ PS1='[\[\e[38;5;175;1;3m\]\d\[\e[0m\] \[\e[38;5;75;1;3m\]\t\[\e[0m\]] \[\e[92m\]
 eval $(ssh-agent) > /dev/null
 
 ssh-add ~/.ssh/f0nzy 2> /dev/null
+
 
 
 . "$HOME/.cargo/env"
