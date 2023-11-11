@@ -1,0 +1,22 @@
+session_name: htb
+windows:
+  - window_name: kali
+    layout: tiled
+    panes:
+      - cd ~/ctf-repo/HTB/
+      - cd ~/ctf-repo/tools/
+
+  - window_name: local
+    layout: tiled
+    panes:
+      -
+      -
+  - window_name: local
+    layout: tiled
+    panes:
+      -
+      -
+  - window_name: vpn
+    layout: tiled
+    panes:
+      - htb
