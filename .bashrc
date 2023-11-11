@@ -24,6 +24,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+PS1='[\[\e[38;5;175;1;3m\]\d\[\e[0m\] \[\e[38;5;75;1;3m\]\t\[\e[0m\]] \[\e[92m\]$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)\n\[\e[0m\]\\$ '
+
+
 eval $(ssh-agent) > /dev/null
 
 ssh-add ~/.ssh/f0nzy 2> /dev/null
